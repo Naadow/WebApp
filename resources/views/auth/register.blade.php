@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        <div style="font-size:35px; color:#fff;opacity: 0.7;" class="card-header">{{ __('Register') }}</div><br>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -70,7 +70,13 @@
                             <input type="button" value="Login" /><br>
                         </a>
                     </form>
-                    
+                    <div class="drops">
+                    <div class="drop drop-1"></div>
+                    <div class="drop drop-2"></div>
+                    <div class="drop drop-3"></div>
+                    <div class="drop drop-4"></div>
+                    <div class="drop drop-5"></div>
+                </div>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@
                 
                     <form class="form-login" method="POST" action="{{ route('login') }}">
                         @csrf
+                        <div style="font-size:35px; color:#fff;opacity: 0.7;" class="card-header">{{ __('Login') }}</div><br>
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                            
 
