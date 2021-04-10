@@ -1,6 +1,9 @@
 @extends('layouts.main')
 @section('content')
-    <body>
+<header>
+<!doctype html>
+</header>    
+<body>
     <div class="container">
    <form >
      <p>Welcome</p>
@@ -8,18 +11,18 @@
       @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}"></a>
-                            <input type="button" value="Home" /><br>
+                        <a href="{{ url('/home') }}">
+                            <input class="input-glassmorphism" type="button" value="Home" /><br>
                         </a>
                         @else
                         <a href="{{ route('login') }}">
-                            <input type="button" value="Login" /><br>
+                            <input class="input-glassmorphism" type="button" value="Login" /><br>
                         </a>
 
                         @if (Route::has('register'))
                          
                             <a href="{{ route('register') }}">
-                            <input type="button" value="Register" /><br>
+                            <input class="input-glassmorphism" type="button" value="Register" /><br>
                         </a>
                         @endif
                     @endauth

@@ -15,7 +15,7 @@
                                         <strong>{{ $message }}</strong><br>
                                     </span><br>
                                 @enderror
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input class="input-glassmorphism" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                
                             </div>
@@ -24,7 +24,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input class="input-glassmorphism" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -39,12 +39,12 @@
                                 <div class="form-check">
                                     
 
-                                    <input style="transform: scale(2); width:auto " type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="input-glassmorphism" style="transform: scale(2); width:auto " type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label style="margin-top:500px !important" class="form-check-label" for="remember">
                                     
                                         {{ __('Remember Me') }}
-                                    </label>
+                                    </label><br>
                                 </div>
                             </div>
                         </div>
@@ -60,11 +60,11 @@
 
                                 @if (Route::has('password.request'))
                                     <br><a  href="{{ route('password.request') }}">
-                                        <input style="margin-bottom:0px" type="button" value="Reset Password" /><br>
+                                        <input class="input-glassmorphism" style="margin-bottom:0px" type="button" value="Reset Password" /><br>
                                     </a><br>
                                 @endif
                                 <a href="{{ route('register') }}">
-                                     <input style="margin-top:0px" type="button" value="Register" /><br>
+                                     <input class="input-glassmorphism" style="margin-top:0px" type="button" value="Register" /><br>
                                 </a>
                             </div>
                         </div>
