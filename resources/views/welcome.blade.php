@@ -204,21 +204,23 @@ button:focus {
     <div class="container">
    <form >
      <p>Welcome</p>
-     <input type="button" value="Login"><br>
-     <input type="button" value="Register"><br>
-     <a href="{{ route('login') }}">
-        <input type="button" value="Visit Google" />
-    </a>
 
       @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <input href="{{ route('login') }}">Login</input>
+                            <input type="button" value="Home" /><br>
+                        </a>
+                        @else
+                        <a href="{{ route('login') }}">
+                            <input type="button" value="Login" /><br>
+                        </a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                         
+                            <a href="{{ route('register') }}">
+                            <input type="button" value="Register" /><br>
+                        </a>
                         @endif
                     @endauth
                 </div>
@@ -235,26 +237,7 @@ button:focus {
    </div>
  </div>    
 
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+       
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>             
-            </div>
-        </div>
     </body>
 </html>
