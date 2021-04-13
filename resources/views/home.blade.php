@@ -2,6 +2,7 @@
 
 @section('ProfileDropDown')
 <div class="row">
+
                      <div style="text-align:right; margin-bottom:5px" class="col">
              
                         <ul class="navbar-nav ml-auto">
@@ -48,35 +49,20 @@
                         @endguest
                     </ul>
 
-                    </div><br>
-
-
+                    </div>
                 </div>
 @endsection
 
+@section('loggedininfo')
 
-@section('content')
+<div class="card-header">{{ Auth::user()->name }}´s {{ __('dashboard') }}<br>{{ __('You are logged in!') }} </div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-           
-            <div class="card">
-            @yield('ProfileDropDown')
-              
-                <div class="card-header">{{ Auth::user()->name }}´s {{ __('dashboard') }}<br>{{ __('You are logged in!') }} </div>
-               
+@endsection
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    <!-- --->
-                    <div class="container">
-                        <div class="row">
+@section('dashbordrows')
+
+<div class="row">
                         <div  style="text-align:center" class="col">
                             <a href="{{url('/home/Profile')}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -113,17 +99,13 @@
                             </svg></a>
                             </div>
                             <div  style="text-align:center" class="col">
-                            {{__('5 of 6')}}
+                            {{__('Spritpreis')}}
                             </div>
                             <div  style="text-align:center" class="col">
-                            {{__('6 of 6')}}
+                            {{__('Corona Zahlen')}}
                             </div>
                         </div>
                         </div>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection

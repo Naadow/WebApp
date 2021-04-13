@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -24,11 +25,19 @@
         <main class="py-4">        
             <div class="container">
                 <div class="row justify-content-center">
+
+                
+
                     <div class="col-md-8">
                         <div class="card">
-                        @yield('ProfileDropDown')
+                            <div class="row">
+                        <div style="text-align:left; margin-bottom:5px" class="col">
+                         
+                         @yield('ProfileDropDown')
                         
-                            @yield('loggedininfo')
+                        </div>
+                        </div>
+                      
                         
                             <div class="card-body">
                                 @if (session('status'))
@@ -37,10 +46,7 @@
                                     </div>
                                 @endif
 
-                                <!-- --->
-                                <div class="container">
-                                    @yield('dashbordrows')
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -49,4 +55,3 @@
     </div>
 </body>
 </html>
-
